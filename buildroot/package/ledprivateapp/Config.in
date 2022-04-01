@@ -1,0 +1,4 @@
+config BR2_PACKAGE_LEDPRIVATEAPP
+	bool "ledprivateapp"
+	help
+		Moja prywatna aplikacja obslugujaca ledy :)
