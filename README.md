@@ -3,7 +3,7 @@ Poradnik do laboratorium 2 z przedmiotu Linux w Systemach wbudowanych
 
 $BRPATH - katalog g³ówny buildroota
 
-#Co trzeba zrobiæ? 
+# Co trzeba zrobiæ? 
 
 1. Skompilowaæ kod w c++ na Raspberry Pi. 
 2. Skomunikowaæ siê z diod¹ i przyciskami z kodu w c++.
@@ -12,8 +12,8 @@ Tutaj poka¿ê jak skompilowaæ kod który bêdzie œwieci³ diod¹ (diod¹ obok tej ozna
 
 ---
 
-#Kompilacja hello world w c++
-##Podstawy pakietu.
+# Kompilacja hello world w c++
+## Podstawy pakietu.
 ¯eby skompilowaæ kod prze buildroota nale¿y dodaæ swój w³asny pakiet do buildroota.
 
 
@@ -22,7 +22,7 @@ $PACKAGENAME - nazwa jakiegoœ wybranego pakietu
 Ka¿dy pakiet znajduje siê w folderze $BRPATH/package/$PACKAGENAME
 Ka¿dy pakiet jest opisany przez co najmniej dwa pliki(s¹ w repo):
 
-1.Config.in 
+1. Config.in 
 Plik opisuje jak wygl¹da pakiet gdy widzimy go w menuconfig - jego nazwê, tekst jego pomocy, pakiety które powinny byæ zainstalowane w buildroocie ¿eby nasz pakiet siê skompilowa³.
 Wa¿na uwaga: nie jest konieczne, ¿eby w tym pliku zale¿noœci by³y wypisane. Jest to jednak przydatne gdy zaczyna siê robiæ wiêcej pakietów.
 
@@ -40,7 +40,7 @@ Tutaj nale¿y umieœciæ zale¿noœci naszego pakietu.
 Polecam wykonywaæ kompilacjê przy u¿yciu CMake. Sprowadza siê to do napisania jednego(dwóch je¿eli chce siê to zrobiæ porz¹dnie) plików z ~5 linijkami a nie trzeba siê bawiæ bezpoœrednio z Makefile'ami
 
 
-##Dodanie pakietu do systemu
+## Dodanie pakietu do systemu
 
 Gdy mamy ju¿ gotowy folder z dwoma plikami opisuj¹cymi nasz pakiet musimy jeszcze sprawiæ, ¿eby by³ on widoczny w menuconfig.
 Sprowadza siê to do edytowania pliku $BRPATH/package/Config.in
@@ -63,13 +63,13 @@ Po zmodyfikowaniu $BRPATH/package/Config.in wpisujemy make menuconfig, znajdujem
 
 Je¿eli po wpisaniu make nie ma ¿adnych b³êdów zwi¹zzanych z naszym pakietem oznacza to ¿e skompilowa³ siê i jest git!.
 
-##Czysta rekompilacja naszego pakietu.
+## Czysta rekompilacja naszego pakietu.
 
 Czasami gdy chcemy zmieniæ np CMakeLists lub Makefile chcemy mieæ pewnoœæ ¿e rekompilacja wykona³a siê poprawnie.
 
 Najlatwiej to osi¹gn¹æ usuwaj¹c folder $BRPATH/output/build/${PACKAGENAME}*  <--- jakoœ tak siê nazywa, mniejsza o szczegó³y.
 
-#Dodanie pakietu z kodem obs³uguj¹cym LEDY
+# Dodanie pakietu z kodem obs³uguj¹cym LEDY
 
 Obs³ugê LEDów osi¹gamy korzystaj¹c z libgpiod.
 
