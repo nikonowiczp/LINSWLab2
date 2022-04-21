@@ -1,0 +1,3 @@
+/malina/nikonowiczp/cpp_app/build/CMakeFiles/rebuild_cache.dir
+/malina/nikonowiczp/cpp_app/build/CMakeFiles/edit_cache.dir
+/malina/nikonowiczp/cpp_app/build/CMakeFiles/ledprivateapp.dir
