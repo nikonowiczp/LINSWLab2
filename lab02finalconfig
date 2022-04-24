@@ -1,0 +1,776 @@
+#
+# Automatically generated file; DO NOT EDIT.
+# Buildroot 2022.02 Configuration
+#
+
+#
+# Target options
+#
+
+#
+# armv8 cores
+#
+
+#
+# armv8.1a cores
+#
+
+#
+# armv8.2a cores
+#
+
+#
+# armv8.4a cores
+#
+
+#
+# Build options
+#
+
+#
+# Commands
+#
+
+#
+# Mirrors and Download locations
+#
+
+#
+# Advanced
+#
+
+#
+# Security Hardening Options
+#
+
+#
+# Toolchain
+#
+
+#
+# Toolchain External Options
+#
+
+#
+# Host GDB Options
+#
+
+#
+# Toolchain Generic Options
+#
+
+#
+# System configuration
+#
+
+#
+# bash, dash, mksh, zsh need BR2_PACKAGE_BUSYBOX_SHOW_OTHERS
+#
+
+#
+# Kernel
+#
+
+#
+# Linux Kernel Extensions
+#
+
+#
+# Linux Kernel Tools
+#
+
+#
+# selftests needs BR2_PACKAGE_BUSYBOX_SHOW_OTHERS and a toolchain w/ dynamic library and headers >= 3.14
+#
+
+#
+# Target packages
+#
+
+#
+# Private apps
+#
+
+#
+# Audio and video applications
+#
+
+#
+# kodi needs python3 w/ .py modules, a uClibc or glibc toolchain w/ C++, threads, wchar, dynamic library, gcc >= 4.9
+#
+
+#
+# kodi needs an OpenGL EGL backend with OpenGL or GLES support
+#
+
+#
+# miraclecast needs systemd and a glibc toolchain w/ threads and wchar
+#
+
+#
+# Compressors and decompressors
+#
+
+#
+# Debugging, profiling and benchmark
+#
+
+#
+# clinfo needs an OpenCL provider
+#
+
+#
+# dacapo needs OpenJDK
+#
+
+#
+# sysdig needs a glibc or uclibc toolchain w/ C++, threads, gcc >= 4.8, dynamic library, a Linux kernel, and luajit or lua 5.1 to be built
+#
+
+#
+# Development tools
+#
+
+#
+# Filesystem and flash utilities
+#
+
+#
+# zfs needs udev /dev management
+#
+
+#
+# Fonts, cursors, icons, sounds and themes
+#
+
+#
+# Cursors
+#
+
+#
+# Fonts
+#
+
+#
+# Icons
+#
+
+#
+# Sounds
+#
+
+#
+# Themes
+#
+
+#
+# Games
+#
+
+#
+# minetest needs X11 and an OpenGL provider
+#
+
+#
+# solarus needs OpenGL and a toolchain w/ C++, gcc >= 4.9, NPTL, dynamic library, and luajit or lua 5.1
+#
+
+#
+# Graphic libraries and applications (graphic/text)
+#
+
+#
+# Graphic applications
+#
+
+#
+# cage needs udev, EGL w/ Wayland backend and OpenGL ES support
+#
+
+#
+# cog needs wpewebkit and a toolchain w/ threads
+#
+
+#
+# glmark2 needs an OpenGL or an openGL ES and EGL backend
+#
+
+#
+# glslsandbox-player needs a toolchain w/ threads and an openGL ES and EGL driver
+#
+
+#
+# kmscube needs EGL, GBM and OpenGL ES, and a toolchain w/ thread support
+#
+
+#
+# midori needs libgtk3 w/ X11 or wayland backend
+#
+
+#
+# stellarium needs Qt5 and an OpenGL provider
+#
+
+#
+# Graphic libraries
+#
+
+#
+# ogre needs X11 and an OpenGL provider
+#
+
+#
+# Other GUIs
+#
+
+#
+# tekui needs a Lua interpreter and a toolchain w/ threads, dynamic library
+#
+
+#
+# weston needs udev and a toolchain w/ locale, threads, dynamic library, headers >= 3.0
+#
+
+#
+# vte needs an OpenGL or an OpenGL-EGL/wayland backend
+#
+
+#
+# Hardware handling
+#
+
+#
+# Firmware
+#
+
+#
+# bcache-tools needs udev /dev management
+#
+
+#
+# brickd needs udev /dev management, a toolchain w/ threads, wchar
+#
+
+#
+# dt-utils needs udev /dev management
+#
+
+#
+# edid-decode needs a toolchain w/ C++, gcc >= 4.7
+#
+
+#
+# eudev needs eudev /dev management
+#
+
+#
+# targetcli-fb depends on Python
+#
+
+#
+# udisks needs udev /dev management
+#
+
+#
+# upower needs udev /dev management
+#
+
+#
+# usbmount requires udev to be enabled
+#
+
+#
+# usbutils needs udev /dev management and toolchain w/ threads, gcc >= 4.9
+#
+
+#
+# Interpreter languages and scripting
+#
+
+#
+# openjdk needs X.Org
+#
+
+#
+# Perl libraries/modules
+#
+
+#
+# perl-net-ssh2 needs libssh2 with OpenSSL or Libgcrypt backend
+#
+
+#
+# Libraries
+#
+
+#
+# Audio/Sound
+#
+
+#
+# Compression and decompression
+#
+
+#
+# Crypto
+#
+
+#
+# Database
+#
+
+#
+# Filesystem
+#
+
+#
+# Graphics
+#
+
+#
+# assimp needs libzlib
+#
+
+#
+# at-spi2-atk depends on X.org
+#
+
+#
+# at-spi2-core depends on X.org
+#
+
+#
+# chipmunk needs an OpenGL backend
+#
+
+#
+# granite needs libgtk3 and a toolchain w/ wchar, threads
+#
+
+#
+# gtkmm3 needs libgtk3 and a toolchain w/ C++, wchar, threads, gcc >= 7
+#
+
+#
+# irrlicht needs X11 and an OpenGL provider
+#
+
+#
+# libepoxy needs an OpenGL and/or OpenGL EGL backend
+#
+
+#
+# libfm needs X.org and a toolchain w/ wchar, threads, C++, gcc >= 4.9
+#
+
+#
+# libfreeglut depends on X.org and needs an OpenGL backend
+#
+
+#
+# libglew depends on X.org and needs an OpenGL backend
+#
+
+#
+# libglfw depends on X.org or Wayland and an OpenGL or GLES backend
+#
+
+#
+# libglu needs an OpenGL backend
+#
+
+#
+# libgtk3 needs an OpenGL or an OpenGL-EGL/wayland backend
+#
+
+#
+# libwpe needs a toolchain w/ C++, dynamic library and an OpenEGL-capable backend
+#
+
+#
+# webkitgtk needs libgtk3 and a toolchain w/ C++, wchar, threads, dynamic library, gcc >= 7, host gcc >= 4.9
+#
+
+#
+# wlroots needs udev, EGL w/ Wayland backend and OpenGL ES support
+#
+
+#
+# wpebackend-fdo needs a toolchain w/ C++, wchar, threads, dynamic library and an OpenEGL-capable Wayland backend
+#
+
+#
+# wpewebkit needs an OpenGL ES w/ EGL-capable Wayland backend
+#
+
+#
+# Hardware handling
+#
+
+#
+# hidapi needs udev /dev management and a toolchain w/ NPTL, threads, gcc >= 4.9
+#
+
+#
+# libatasmart requires udev to be enabled
+#
+
+#
+# libblockdev needs udev /dev management and a toolchain w/ wchar, threads, dynamic library
+#
+
+#
+# libgudev needs udev /dev handling and a toolchain w/ wchar, threads
+#
+
+#
+# libinput needs udev /dev management
+#
+
+#
+# Javascript
+#
+
+#
+# JSON/XML
+#
+
+#
+# Logging
+#
+
+#
+# log4qt needs qt5
+#
+
+#
+# Multimedia
+#
+
+#
+# Networking
+#
+
+#
+# libuhttpd needs a toolchain w/ gcc >= 4.9
+#
+
+#
+# Other
+#
+
+#
+# gobject-introspection needs python3
+#
+
+#
+# libexecinfo needs a musl or uclibc toolchain w/ dynamic library
+#
+
+#
+# libpeas needs python3
+#
+
+#
+# liburing needs a toolchain w/ gcc >= 4.9, headers >= 5.1
+#
+
+#
+# Security
+#
+
+#
+# Text and terminal handling
+#
+
+#
+# Mail
+#
+
+#
+# Miscellaneous
+#
+
+#
+# domoticz needs lua 5.3 and a toolchain w/ C++, gcc >= 6, NPTL, wchar, dynamic library
+#
+
+#
+# gqrx needs qt5
+#
+
+#
+# Networking applications
+#
+
+#
+# cfm needs a toolchain w/ threads, kernel headers >= 5.0
+#
+
+#
+# connman-gtk needs libgtk3 and a glibc or uClibc toolchain w/ wchar, threads, resolver, dynamic library
+#
+
+#
+# ejabberd needs erlang, toolchain w/ C++
+#
+
+#
+# gupnp-tools needs libgtk3
+#
+
+#
+# mrp needs a toolchain w/ threads, kernel headers >= 5.0
+#
+
+#
+# NetworkManager needs udev /dev management and a glibc toolchain w/ headers >= 4.6, dynamic library, wchar, threads, gcc >= 4.9
+#
+
+#
+# prosody needs the lua interpreter, dynamic library
+#
+
+#
+# rabbitmq-server needs erlang
+#
+
+#
+# Package managers
+#
+
+#
+# -------------------------------------------------------
+#
+
+#
+# Please note:                                           
+#
+
+#
+# - Buildroot does *not* generate binary packages,       
+#
+
+#
+# - Buildroot does *not* install any package database.   
+#
+
+#
+# *                                                      
+#
+
+#
+# It is up to you to provide those by yourself if you    
+#
+
+#
+# want to use any of those package managers.             
+#
+
+#
+# *                                                      
+#
+
+#
+# See the manual:                                        
+#
+
+#
+# http://buildroot.org/manual.html#faq-no-binary-packages
+#
+
+#
+# -------------------------------------------------------
+#
+
+#
+# Real-Time
+#
+
+#
+# Security
+#
+
+#
+# setools needs python3
+#
+
+#
+# Shell and utilities
+#
+
+#
+# Shells
+#
+
+#
+# Utilities
+#
+
+#
+# System tools
+#
+
+#
+# circus needs Python 3 and a toolchain w/ C++, threads
+#
+
+#
+# iotop depends on python3
+#
+
+#
+# libvirt needs udev /dev management, a toolchain w/ threads, dynamic library, wchar, kernel headers >= 3.12 (4.11 for AArch64)
+#
+
+#
+# multipath-tools needs udev and a uClibc or glibc toolchain w/ threads, dynamic library
+#
+
+#
+# netifrc needs openrc as init system
+#
+
+#
+# pamtester depends on linux-pam
+#
+
+#
+# sdbus-c++ needs systemd and a toolchain w/ C++, gcc >= 7
+#
+
+#
+# sdbusplus needs systemd and a toolchain w/ C++, gcc >= 7
+#
+
+#
+# supervisor needs a python interpreter
+#
+
+#
+# Text editors and viewers
+#
+
+#
+# Filesystem images
+#
+
+#
+# Bootloaders
+#
+
+#
+# Host utilities
+#
+
+#
+# Legacy config options
+#
+
+#
+# Legacy options removed in 2022.02
+#
+
+#
+# Legacy options removed in 2021.11
+#
+
+#
+# Legacy options removed in 2021.08
+#
+
+#
+# Legacy options removed in 2021.05
+#
+
+#
+# Legacy options removed in 2021.02
+#
+
+#
+# Legacy options removed in 2020.11
+#
+
+#
+# Legacy options removed in 2020.08
+#
+
+#
+# Legacy options removed in 2020.05
+#
+
+#
+# Legacy options removed in 2020.02
+#
+
+#
+# Legacy options removed in 2019.11
+#
+
+#
+# Legacy options removed in 2019.08
+#
+
+#
+# Legacy options removed in 2019.05
+#
+
+#
+# Legacy options removed in 2019.02
+#
+
+#
+# Legacy options removed in 2018.11
+#
+
+#
+# Legacy options removed in 2018.08
+#
+
+#
+# Legacy options removed in 2018.05
+#
+
+#
+# Legacy options removed in 2018.02
+#
+
+#
+# Legacy options removed in 2017.11
+#
+
+#
+# Legacy options removed in 2017.08
+#
+
+#
+# Legacy options removed in 2017.05
+#
+
+#
+# Legacy options removed in 2017.02
+#
+
+#
+# Legacy options removed in 2016.11
+#
+
+#
+# Legacy options removed in 2016.08
+#
+
+#
+# Legacy options removed in 2016.05
+#
+
+#
+# Legacy options removed in 2016.02
+#
+
+#
+# Legacy options removed in 2015.11
+#
+
+#
+# Legacy options removed in 2015.08
+#

@@ -21,6 +21,11 @@ bool blinkSingleLed(gpiod_line *line){
 		perror("Set line output failed\n");
 		return false;
 	}
+	struct timespec waitTime;
+	waitTime.tv_sec = 0;
+	waitTime.tv_nsec = 50* 1000000;
+	nanosleep(&waitTime, NULL);
+
 	ret = gpiod_line_set_value(line, 0);
 	if (ret < 0) {
 		perror("Set line output failed\n");
@@ -55,11 +60,11 @@ int main(int argc, char **argv)
 	std::time_t started_counting = std::time(0);
 	std::time_t current_time = std::time(0);
 
+	bool isCurrentlyClicked = false;
 
 	struct timespec begin_count;
 	struct timespec last_count;
 	struct timespec timeout;
-
 	bool isStarted = false;
 
 	int err,ret;
@@ -110,6 +115,8 @@ int main(int argc, char **argv)
 	timeout.tv_nsec = 60 * 1000000;
 	
 	printf("Stopper started\n");
+
+	
 	while(true){
 		//printf("Listening for signals\n");
 		err = gpiod_line_event_wait_bulk(&buttonLines, NULL, &events);
@@ -132,7 +139,8 @@ int main(int argc, char **argv)
   		  perror("gpiod_line_get_value_bulk");
   		  goto cleanup;
   		}
-		if(values[0] == 0){
+		if(values[0] == 0&& !isCurrentlyClicked){
+			isCurrentlyClicked = true;
 			if(!isStarted){
 				printf("Beginning time counting\n");
 				//started_counting = std::time(nullptr);
@@ -146,7 +154,7 @@ int main(int argc, char **argv)
 				int resultminisec = (last_count.tv_nsec - begin_count.tv_nsec)/1000000;
 				if(resultminisec<0){
 					resultsec -=1;
-					resultsec = 1000 - resultsec;
+					resultminisec = 1000 + resultminisec;
 				}
 				printf("Time recorded: %d seconds %d miliseconds\n", resultsec,resultminisec);
 				if(!blinkSingleLed(ledLine02)) goto cleanup;
@@ -154,16 +162,33 @@ int main(int argc, char **argv)
 			}
 			
 		}
-		if(values[1] == 0){
-			printf("Time counter stopped");
+		if(values[0]!= 0){
+			isCurrentlyClicked = false;
+		}
+
+		if(values[1] == 0 && isStarted == true){
 			if(!setSingleLed(ledLine01,0)) goto cleanup;
 			isStarted= false;
+
+			clock_gettime(CLOCK_REALTIME, &last_count);
+			int resultsec = last_count.tv_sec - begin_count.tv_sec;
+			int resultminisec = (last_count.tv_nsec - begin_count.tv_nsec)/1000000;
+			if(resultminisec<0){
+				resultsec -=1;
+				resultminisec = 1000 + resultminisec;
+			}
+			printf("Time counter stopped. Time recorded: %d seconds %d miliseconds\n", resultsec,resultminisec);
+			if(!blinkSingleLed(ledLine02)) goto cleanup;
+
 		}
 		if(values[2] == 0){
 			if(!setSingleLed(ledLine01,0)) goto cleanup;
-			printf("Ending program");
+			printf("Ending program\n");
+
+			
 			goto cleanup;
 		}
+		
   		fflush(stdout);
 
 
